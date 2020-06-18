@@ -1,3 +1,4 @@
+// completed with the help of Alan Jones and Jen Foko
 const parentElement = document.querySelector('.katas-list')
 
 //kata 1 
