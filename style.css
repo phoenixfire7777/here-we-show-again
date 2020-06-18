@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+
+h3 {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+p {
+    display: flex;
+    padding: 20px;
+}
