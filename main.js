@@ -43,13 +43,12 @@ const kata4Heading = document.createElement('h3')
 kata4Heading.append('KATA 4')
 parentElement.append(kata4Heading)
 
-for (let i = 1; i <= 100; i += 1) {
-    const counter5IsPerfectSquares = Number.isInteger(Math.sqrt(i))
-    if (counter5IsPerfectSquares) {
-        let kata4Numbers = document.createElement('p')
-        kata4Numbers.append(i)
-        kata4Heading.append(kata4Numbers)
-    }
+for (let i = 5; i <= 100; i += 5) {
+
+    let kata4Numbers = document.createElement('p')
+    kata4Numbers.append(i)
+    kata4Heading.append(kata4Numbers)
+
 }
 
 // kata 5
@@ -199,11 +198,15 @@ for (let index = 0; index < sampleArray.length; index += 1) {
 const kata15Heading = document.createElement('h3')
 kata15Heading.append('KATA 15')
 parentElement.append(kata15Heading)
-let kata15Sum = 0
 
+let kata15Sum
 for (let index = 0; index < sampleArray.length; index += 1) {
-    kata15Sum += sampleArray[index]
-
+    kata15Sum = 0
+    let numbers = sampleArray[index]
+    let innerSampleArray = numbers.toString().split('')
+    for (let innerIndex = 0; innerIndex < innerSampleArray.length; innerIndex += 1) {
+        kata15Sum += Number(innerSampleArray[innerIndex])
+    }
     const kata15number = document.createElement('p')
     kata15number.append(kata15Sum)
     kata15Heading.append(kata15number)
